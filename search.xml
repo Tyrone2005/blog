@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Java之23种设计模式(单例模式)</title>
-    <url>/2021/04/01/Java%E4%B9%8BHashMap%E5%8E%9F%E7%90%86/</url>
+    <url>/2021/04/01/singelton/</url>
     <content><![CDATA[<p><strong>单例模式是23种设计模式中醉常用的一种，属于对象创建型模式；</strong></p>
 <p><strong>核心思想：</strong></p>
 <p>​    保证系统中一个类仅有一个实例，并且提供一个访问该实例的全局访问方法。</p>
@@ -10,6 +10,7 @@
 <p>1.单例类只能 有一个实例；</p>
 <p>2.单例类必须自己创建唯一实例</p>
 <p>3.单例类必须给其他对象提供访问该实例的方法；</p>
+<span id="more"></span>
 <p><strong>常见的应用场景：</strong>Windows任务管理器，数据库连接池，Java中的Runtime，spring中Bean的默认生命周期;</p>
 <p><strong>单例模式的优点：</strong></p>
 <p>1.提供了唯一实例的全局访问方法，可以优化共享资源的访问</p>
@@ -34,7 +35,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;</span><br><span class="line">		<span class="keyword">synchronized</span> (Singleton.class) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> singleton;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    使用同步块，解决了性能的问题，但是是线程安全的吗？非线程安全的！因为在new的时候，虚拟机内部的操作是通过多个步骤来实现的，在JVM内部可能会发生<strong>指令重排</strong>，会导致获取的实例是非正常的实例，或许没有进行初始化，因此，这种方式也不可取。</p>
-<p>​    <img src="D:\blog\images\initObj.jpg"></p>
+<p>​    <img src="/2021/04/01/singelton/initObj.jpg"></p>
 <p>这个时候，想到了volatile,它可以防止指令重排，到此，一个完成的单例模式已经完成。</p>
 <p>​    其实还有几种单例模式的实现方式，实现起来比较优雅，比如利用内部类的特性。</p>
 <p>未完待续… …</p>
