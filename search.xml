@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hello,Hexo</title>
+    <url>/2021/03/26/helloHexo/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>Testing</tag>
+        <tag>Another Tag</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java之23种设计模式(单例模式)</title>
     <url>/2021/04/01/singelton/</url>
     <content><![CDATA[<p><strong>单例模式是23种设计模式中醉常用的一种，属于对象创建型模式；</strong></p>
@@ -46,18 +58,6 @@
       <tags>
         <tag>Java</tag>
         <tag>Tyrone</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello,Hexo</title>
-    <url>/2021/03/26/helloHexo/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Diary</category>
-      </categories>
-      <tags>
-        <tag>Testing</tag>
-        <tag>Another Tag</tag>
       </tags>
   </entry>
 </search>
