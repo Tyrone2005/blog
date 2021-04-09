@@ -33,9 +33,9 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="King7&#39; Room">
+<meta property="og:title" content="King7&#39; blog">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="King7&#39; Room">
+<meta property="og:site_name" content="King7&#39; blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Tyrone">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   };
 </script>
 
-  <title>King7' Room</title>
+  <title>King7' blog</title>
   
 
 
@@ -104,7 +104,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">King7' Room</h1>
+      <h1 class="site-title">King7' blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/08/jvm/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -204,12 +204,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King7' Room">
+      <meta itemprop="name" content="King7' blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/08/jvm/" class="post-title-link" itemprop="url">深入学习JVM</a>
+            <a href="/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">深入学习JVM之对象创建与内存分配机制</a>
         </h2>
 
         <div class="post-meta">
@@ -220,7 +220,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-04-08 09:07:28 / 修改时间：15:01:09" itemprop="dateCreated datePublished" datetime="2021-04-08T09:07:28+08:00">2021-04-08</time>
+              <time title="创建时间：2021-04-09 09:41:08 / 修改时间：17:23:50" itemprop="dateCreated datePublished" datetime="2021-04-09T09:41:08+08:00">2021-04-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,11 +243,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>​        学习JVM，可以从三个部分理解JVM：JVM类加载机制、JVM运行时数据区、执行引擎；</p>
-<p>​</p>
+          <p>对象创建的主要流程:</p>
+<p><strong>1.类加载检查</strong></p>
+<p> 虚拟机遇到一条new指令时，首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用，并且检查这个符号引用代表的类是否已被加载、解析和初始化过。如果没有，那必须先执行相应的类加载过程。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/04/08/jvm/#more" rel="contents">
+              <a class="btn" href="/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -271,7 +272,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/01/singelton/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -280,12 +281,87 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King7' Room">
+      <meta itemprop="name" content="King7' blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/01/singelton/" class="post-title-link" itemprop="url">Java之23种设计模式(单例模式)</a>
+            <a href="/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">深入学习JVM之类加载机制</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-09 09:40:24 / 修改时间：14:53:39" itemprop="dateCreated datePublished" datetime="2021-04-09T09:40:24+08:00">2021-04-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>​        类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。类的加载的最终产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并且向Java程序员提供了访问方法区内的数据结构的接口。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tyrone">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="King7' blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Java之23种设计模式(单例模式)</a>
         </h2>
 
         <div class="post-meta">
@@ -330,85 +406,12 @@
 <p>​    保证系统中一个类仅有一个实例，并且提供一个访问该实例的全局访问方法。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/04/01/singelton/#more" rel="contents">
+              <a class="btn" href="/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/26/helloHexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Tyrone">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King7' Room">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/26/helloHexo/" class="post-title-link" itemprop="url">hello,Hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-26 18:01:00" itemprop="dateCreated datePublished" datetime="2021-03-26T18:01:00+08:00">2021-03-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-30 11:01:38" itemprop="dateModified" datetime="2021-03-30T11:01:38+08:00">2021-03-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -481,6 +484,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tyrone"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Tyrone</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -494,12 +499,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>

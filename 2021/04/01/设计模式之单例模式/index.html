@@ -35,20 +35,20 @@
   <meta name="description" content="单例模式是23种设计模式中最常用的一种，属于对象创建型模式； 核心思想： ​    保证系统中一个类仅有一个实例，并且提供一个访问该实例的全局访问方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java之23种设计模式(单例模式)">
-<meta property="og:url" content="http://example.com/2021/04/01/singelton/index.html">
-<meta property="og:site_name" content="King7&#39; Room">
+<meta property="og:url" content="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="King7&#39; blog">
 <meta property="og:description" content="单例模式是23种设计模式中最常用的一种，属于对象创建型模式； 核心思想： ​    保证系统中一个类仅有一个实例，并且提供一个访问该实例的全局访问方法。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/04/01/singelton/initObj.jpg">
+<meta property="og:image" content="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/initObj.jpg">
 <meta property="article:published_time" content="2021-04-01T08:58:37.000Z">
 <meta property="article:modified_time" content="2021-04-07T08:31:07.832Z">
 <meta property="article:author" content="Tyrone">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Tyrone">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/04/01/singelton/initObj.jpg">
+<meta name="twitter:image" content="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/initObj.jpg">
 
-<link rel="canonical" href="http://example.com/2021/04/01/singelton/">
+<link rel="canonical" href="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
 
 
 <script id="page-configurations">
@@ -61,7 +61,7 @@
   };
 </script>
 
-  <title>Java之23种设计模式(单例模式) | King7' Room</title>
+  <title>Java之23种设计模式(单例模式) | King7' blog</title>
   
 
 
@@ -112,7 +112,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">King7' Room</h1>
+      <h1 class="site-title">King7' blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -204,7 +204,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/01/singelton/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -213,7 +213,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King7' Room">
+      <meta itemprop="name" content="King7' blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -290,7 +290,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;</span><br><span class="line">		<span class="keyword">synchronized</span> (Singleton.class) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> singleton;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    使用同步块，解决了性能的问题，但是是线程安全的吗？非线程安全的！因为在new的时候，虚拟机内部的操作是通过多个步骤来实现的，在JVM内部可能会发生<strong>指令重排</strong>，会导致获取的实例是非正常的实例，或许没有进行初始化，因此，这种方式也不可取。</p>
-<p>​    <img src="/2021/04/01/singelton/initObj.jpg"></p>
+<p>​    <img src="/2021/04/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/initObj.jpg"></p>
 <p>这个时候，想到了volatile,它可以防止指令重排，到此，一个完整的单例模式已经完成。</p>
 <p>​    其实还有几种单例模式的实现方式，实现起来比较优雅，比如利用内部类的特性。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Holder</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> Holder.singleton;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -320,13 +320,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/03/26/helloHexo/" rel="prev" title="hello,Hexo">
-      <i class="fa fa-chevron-left"></i> hello,Hexo
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/08/jvm/" rel="next" title="深入学习JVM">
-      深入学习JVM <i class="fa fa-chevron-right"></i>
+    <a href="/2021/04/09/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0JVM%E4%B9%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" rel="next" title="深入学习JVM之类加载机制">
+      深入学习JVM之类加载机制 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -391,6 +388,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tyrone"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Tyrone</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -404,12 +403,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
